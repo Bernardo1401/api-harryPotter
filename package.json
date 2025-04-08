@@ -4,9 +4,9 @@
   "description": "Essa é uma api para gerenciar um projeto com banco de dados",
   "main": "server.js",
   "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
-},
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
   "keywords": [
     "senai",
     "api",
@@ -20,6 +20,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "fast-csv": "^5.0.2",
+    "pdfkit": "^0.16.0",
     "pg": "^8.14.1"
   },
   "devDependencies": {
