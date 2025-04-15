@@ -19,13 +19,14 @@ const getWizardById = async (id) => {
     return result.rows[0];
 };
 
-const createWizard = async (name, house_id) => {
+const createWizard = async (name, house_id, photo) => {
     const result = await pool.query(
-        "INSERT INTO wizards (name, house_id) VALUES ($1, $2) RETURNING *",
-        [name, house_id]
+        "INSERT INTO wizards (name, house_id, photo) VALUES ($1, $2, $3) RETURNING *",
+        [name, house_id, photo]
     );
     return result.rows[0];
 };
+
 
 const deleteWizard = async (id) => {
     const result = await pool.query("DELETE FROM wizards WHERE id = $1 RETURNING *", [id]);
